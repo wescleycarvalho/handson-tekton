@@ -22,7 +22,7 @@ metadata:
   name: count
 spec:
   resources:
-    - name: git-repo
+    - name: src-repo
       type: git
   tasks:
     - name: count-task
@@ -31,12 +31,12 @@ spec:
       resources:
         inputs:
           - name: repo
-            resource: git-repo
+            resource: src-repo
 ---
-apiVersion: tekton.dev/v1alpha1
+apiVersion: tekton.dev/v1beta1
 kind: PipelineResource
 metadata:
-  name: git-repo
+  name: src-repo
 spec:
   type: git
   params:

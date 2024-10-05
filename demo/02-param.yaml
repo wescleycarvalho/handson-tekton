@@ -5,7 +5,7 @@ metadata:
 spec:
   params:
     - name: person
-      description: Name of person to greet
+      description: $USER
       default: World
       type: string
   steps:
